@@ -8,7 +8,7 @@ errors = list()
 for i in range(0,len(mathematicians)):
     try:
         guru = wiki.summary(mathematicians[i])
-        birthday = re.search(r'\w+\s\w+\s\d\d\d\d',guru).group()
+        birthday = re.search(r'\w+\s\w+[,\s]+\d\d\d\d',guru).group()
         print()
         print(mathematicians[i] + ' born on ' + birthday)
         print()
@@ -16,3 +16,4 @@ for i in range(0,len(mathematicians)):
         errors.append(mathematicians[i])
 
 print(errors)
+
