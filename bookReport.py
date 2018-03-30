@@ -4,7 +4,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 
 def askUserToSearchWiki():
-    artical = input('How would you like to look up on Wikipedia?')
+    artical = input('Who would you like to look up on Wikipedia?')
     summary = wiki.summary(artical)
 
     return summary
